@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/local/opt/python@3.8/bin/python3
 
 import sys
 from time import sleep
@@ -9,7 +9,7 @@ from re import match
 # supply path via Templater user function definition: <path>/obs_todo_migr.py <% tp.file.folder(true) %>
 daily_notes_dir = sys.argv[1]
 
-unchecked = r"- \[ \]"
+unchecked = r"- \[`\]"
 prevnote = []
 open_todos = []
 carryover_tally = "." # append each time todo is migrated
@@ -28,6 +28,7 @@ if len(files) >= 2:
         lines = f.readlines()
         for line in lines:
             if match(unchecked, line):
+                line = line.replace('`', " ")
                 open_todos.append(line)
             else:
                 prevnote.append(line)

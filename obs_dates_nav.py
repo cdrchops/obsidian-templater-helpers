@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/local/opt/python@3.8/bin/python3
 
 import sys
 from os import listdir
