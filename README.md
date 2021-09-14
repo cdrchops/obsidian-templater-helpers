@@ -15,3 +15,5 @@ To be usable these scripts need to be linked to custom functions (see below) in 
 ![Templater Settings](templater_config.png?raw=true "Templater Settings")
 
 These were tested on Python 3.7.5 on MacOS with Obsidian v0.12.3 and Templater 1.6.0, and are provided as is as examples of what is possible with Templater and simple scripts. Since these do make changes to your notes files, backups are probably a good idea.
+
+Updated scripts to look for [`] and then copy those over to the new Daily Template file and then remove the ` so the task is ready to be worked
